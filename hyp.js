@@ -9,10 +9,16 @@ function calcSquare(a,b){
 
 
 function hypotenuse(){
-    const squareOfSides = calcSquare(Number(sides[0].value), Number(sides[1].value));
+    if ( Number(sides[0].value) > 0 & Number(sides[1].value) > 0 )
+    {
+        const squareOfSides = calcSquare(Number(sides[0].value), Number(sides[1].value));
     
-    const lengthOfHypotenuse = Math.sqrt(squareOfSides);
-    output.innerText = ("Hypotenuse: " + lengthOfHypotenuse);
+        const lengthOfHypotenuse = Math.sqrt(squareOfSides);
+        output.innerText = ("Hypotenuse: " + lengthOfHypotenuse);
+    } else {
+    output.innerText = ("Please enter valid sides.");
+    } 
+    
 }
 
 hypBtn.addEventListener('click', hypotenuse)

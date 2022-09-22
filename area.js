@@ -9,10 +9,16 @@ function calcProduct(a,b){
 
 
 function calcArea(){
+    if ( Number(sides[0].value) > 0 & Number(sides[1].value) > 0){
     const sidesProduct = calcProduct(Number(sides[0].value), Number(sides[1].value));
     
     const areaOfTriangle = (sidesProduct/2);
     output.innerText = ("Area of Triangle: " + areaOfTriangle);
+    } else {
+    output.innerText = ("Please enter valid sides.");
+
+    }
+
 }
 
 areaBtn.addEventListener('click', calcArea)
