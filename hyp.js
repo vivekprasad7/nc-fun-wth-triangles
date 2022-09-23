@@ -14,7 +14,7 @@ function hypotenuse(){
         const squareOfSides = calcSquare(Number(sides[0].value), Number(sides[1].value));
     
         const lengthOfHypotenuse = Math.sqrt(squareOfSides);
-        output.innerText = ("Hypotenuse: " + lengthOfHypotenuse);
+        output.innerText = ("Hypotenuse: " + lengthOfHypotenuse.toFixed(2));
     } else {
     output.innerText = ("Please enter valid sides.");
     } 
